@@ -13,10 +13,10 @@ const PrivateRoute = () => {
     const token=localStorage.getItem('token')
     console.log('token',token)
   return (
-    <div>{ token? ( <div>
-          <Button onClick={()=>logout()} >Logout</Button>
+    <div>{ token? ( <div> 
+          {/* <Button onClick={()=>logout()} >Logout</Button> */}
        
-  <div><h1>hello</h1></div>
+  <div><h1>hello and welcome </h1></div>
   </div>) : (<h2>heyyy no</h2>)}
     </div>
   )
