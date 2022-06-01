@@ -6,11 +6,11 @@ const connectddb=async()=>{
         // adha el // el el cmd mongo nelgua hekel path el uri /
         //y3ref data win mwjouda bil atlas kifkif 
         //link like this dont forget it 
-        //
-        await mongoose.connect("mongodb+srv://kamikaze:Ja2hzpzdujtSD3DG@cluster0.8mco3.mongodb.net/mycontactList?retryWrites=true&w=majority")
+        
+        await mongoose.connect("mongodb+srv://kamikaze:kaito123.HM@cluster0.8mco3.mongodb.net/?retryWrites=true&w=majority")
 console.log('db is connected')
     }catch(err){
-console.log(err)
+console.log('you',err)
     }
 }
 

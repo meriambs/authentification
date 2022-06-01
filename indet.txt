@@ -1,0 +1,5 @@
+bcrypt est une fonction de hachage  bcrypt est une fonction adaptative, c'est-à-dire que l'on peut augmenter le nombre d'itérations pour la rendre plus lente
+
+tenejm tzid li 100 wela akther ema tkhou wa9et 
+
+Un jeton d'authentification, est une solution d'authentification forte. token 

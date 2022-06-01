@@ -26,6 +26,14 @@ userRoutes.post('/login',login)
 userRoutes.get('/getaUser',isAuth,(req,res)=>{
     res.send(req.user)
 })
+userRoutes.get('/gett',(req,res)=>{
+    try{
+        const newUser = new userSchema(req.body)
+        newUser.save()
+        res.send({msg:'you did it '})
+    }catch(err){res.send({msg:'mkn',err})}
+
+})
 module.exports = userRoutes
 
 // on passe a l apartie express validator et on va valider les parties . 

@@ -7,7 +7,7 @@ exports.register= async(req,res)=>{
     try{ 
         const{name,email,password} = req.body
         const found = await UserSchema.findOne({email})
-        if(found){res.status(400).send('you have already an acount')}
+        if(found){return res.status(404).json({ errors })}
 //when do u need the bycrypt ??
 
 
@@ -28,6 +28,7 @@ const hash = bcrypt.hashSync(password, salt);
 newUser.password = hash 
 //end partie hash 
 //token , tnejem t7otou b3ed el save , ema el save khleha heka  wkhw 
+//***************9bel el token t7=wri el hash b3ed tet3ada lil token  */
 const payload = { id : newUser._id}
 var token = jwt.sign(payload, process.env.privateKey);
 //tnjim tspiri 
@@ -40,7 +41,7 @@ var token = jwt.sign(payload, process.env.privateKey);
 //el payload howa el id mt3na , scd part el 
 //nhezou el token njrbouh fil site nrw enfis el id el mt3 el user 
 
-        res.send('true you did it ')
+       
             }catch(err){
                 console.log(err)
                 res.send({msg:'it error',err})
@@ -57,19 +58,19 @@ res.send({msg:'true you did it ',take})
         res.send({msg:'it error'})
     }
 }
-
+//hehd ablock kemel yt3mel  
 
 exports.login=async(req,res)=>{
     try{
     const{email,password} = req.body
     const found = await UserSchema.findOne({email})
     //hekel found mouch el user mtE3i donc jebit el user deja 
-    if(!found){res.status(500).send({msg:'the email is not found you have t create and account '})}
+    if(!found){return res.status(404).json({ errors })}
     
     //tw nediw hekel bycrypt 
     const match = await bcrypt.compare(password, found.password);
     //eror client  how 3ta mdp ghalit 
-    if(!match){res.status(400).send({msg:'you have the wrong mdp'})}
+    if(!match){return res.status(404).json({ errors })}
     
     //bich t7el njibou hekel token , nest7a9ou hekel payload nn 
     const payload = { id : found._id}

@@ -11,7 +11,10 @@ const UserSchema= new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    userName:String,
+    PhoneNumber:Number,
+    githubAccount:String
 })
 
-module.exports = mongoose.model('utilisateur',UserSchema);
+module.exports = mongoose.model('utilisateusr',UserSchema);
