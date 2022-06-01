@@ -23,7 +23,7 @@ userRoutes.post('/singup',registerValidation,validation,register)
 
 userRoutes.post('/login',login)
 //grace au token not id matetfj3ouch -_- it dosnt eat 
-userRoutes.get('/getaUser',isAuth,(req,res)=>{
+userRoutes.get('/uraccount',isAuth,(req,res)=>{
     res.send(req.user)
 })
 userRoutes.get('/gett',(req,res)=>{

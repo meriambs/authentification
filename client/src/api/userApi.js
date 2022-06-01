@@ -6,6 +6,12 @@ import axios from 'axios'
     return data 
 }
 
+//get a singel user 
+export const fetchAccount =async()=>{
+    const token=localStorage.getItem('token');
+    const {data} = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/auth/user/uraccount`,{headers:{Authorization:token}} );
+    return data 
+}
 export const postContact = async(values)=>{
     const addingContact = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/user/singup`,{...values})
 

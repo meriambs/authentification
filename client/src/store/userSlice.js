@@ -35,19 +35,6 @@ setContacts:(state,action)=>{
     return action.payload;
 }
 
-
-
-        //la 3eme update client 
-
-
-
-
-        //la 4eme delet client 
-
-
-
-
-        //la 5eme lecture d'un client unique 
     }
 })
 
