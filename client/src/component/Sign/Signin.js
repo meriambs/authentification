@@ -59,16 +59,17 @@ const Singup = () => {
             onSubmit={(values) => handleSubmit(values)}
            
           >
-            {({ resetForm }) => (
+            {({ resetForm ,values}) => (
               <Form style={{    marginTop: "149px"}}>
               
                 <div className="form-group mb-3">
                   <label htmlFor="lastName">Nom:</label>
                   <Field
                     type="text"
-                    id="lastName"
-                    name="lastName"
+                    id="name"
+                    name="name"
                     className="form-control"
+                    value={values.name}
                   />
                   <ErrorMessage
                     name="lastName"
@@ -83,6 +84,8 @@ const Singup = () => {
                     id="email"
                     name="email"
                     className="form-control"
+                    value={values.email}
+
                   />
                   <ErrorMessage
                     name="email"
@@ -97,6 +100,8 @@ const Singup = () => {
                     id="password"
                     name="password"
                     className="form-control"
+                    value={values.password}
+
                   />
                   <ErrorMessage
                     name="password"

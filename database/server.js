@@ -13,6 +13,9 @@ app.use(express.json())
 
 
 app.use('/auth/user',userRoutes)
+
+
+
 app.use('/account/user',AccounttRouter)
 
 

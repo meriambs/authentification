@@ -7,7 +7,7 @@ const connectddb=async()=>{
         //y3ref data win mwjouda bil atlas kifkif 
         //link like this dont forget it 
         
-        await mongoose.connect("mongodb+srv://kamikaze:kaito123.HM@cluster0.8mco3.mongodb.net/?retryWrites=true&w=majority")
+        await mongoose.connect("")
 console.log('db is connected')
     }catch(err){
 console.log('you',err)

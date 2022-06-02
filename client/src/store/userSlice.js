@@ -27,8 +27,6 @@ const userSlice = createSlice({
 
     ,
 
-
-
         //bich njibou el lista kemla mil backend donc n7otoha fil front  
 //nrj3ou ely bich yjina el kolla ley howa biensure jeyna mil backend 
 setContacts:(state,action)=>{

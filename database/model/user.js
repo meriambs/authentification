@@ -14,7 +14,8 @@ const UserSchema= new mongoose.Schema({
     },
     userName:String,
     PhoneNumber:Number,
-    githubAccount:String
+    githubAccount:String,
+    
 })
 
 module.exports = mongoose.model('utilisateusr',UserSchema);

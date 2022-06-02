@@ -10,7 +10,7 @@ const Register = () => {
   const handleSubmit=async(value)=>{
     await postContact(value)
     // console.log('addingContact',handleSubmit),
-     navigate('/sigin')
+     navigate('/login')
     
       }
   return (

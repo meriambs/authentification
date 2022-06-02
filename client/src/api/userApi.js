@@ -18,7 +18,3 @@ export const postContact = async(values)=>{
 }
 
 
-// export const postLogin = async(values)=>{
-//     const loginUser  = await axios.post(`${process.env.REACT_APP_URL}/auth/user/login`, values);
-//     await localStorage.setItem('token', loginUser.data.token);
-// }
